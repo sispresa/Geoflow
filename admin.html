@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0e1d">
+<meta name="description" content="Riwayat kunjungan GeoFlow.">
+<meta name="robots" content="noindex,nofollow">
+<title>Panel Pengembang — GeoFlow</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2322d3ee'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' font-family='Arial' font-weight='700' fill='%23041018'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/landing.css">
+<link rel="stylesheet" href="./css/pages.css">
+</head>
+<body>
+<div class="pl">
+ <aside class="pl-side" aria-label="Menu panel">
+  <div class="pl-brand"><span class="logo-mark">G</span><span>GeoFlow Panel</span></div>
+  <button class="side-btn active" type="button" data-tab="ringkasan">📊 Ringkasan</button>
+  <button class="side-btn" type="button" data-tab="pengunjung">👥 Daftar pengunjung</button>
+  <button class="side-btn" type="button" data-tab="kunjungan">🕘 Riwayat kunjungan</button>
+  <button class="side-btn" type="button" data-tab="evaluasi">📝 Hasil evaluasi</button>
+  <button class="side-btn" type="button" data-tab="pengaturan">⚙ Pengaturan</button>
+  <div class="spacer"></div>
+  <a class="side-btn" href="./index.html">← Ke situs</a>
+  <button id="logout" class="side-btn" type="button">⏻ Keluar</button>
+ </aside>
+ <main class="pl-main">
+  <header class="dash-top"><div><span class="section-index">PANEL PENGEMBANG</span><h1 id="paneTitle">Ringkasan</h1></div></header>
+  <section data-pane="ringkasan">
+   <div class="stat-grid"><div class="stat"><small>Total kunjungan</small><strong id="stTotal">0</strong><span></span></div><div class="stat"><small>Pengunjung unik</small><strong id="stUnique">0</strong><span>perangkat/browser</span></div><div class="stat"><small>Hari ini</small><strong id="stToday">0</strong><span></span></div><div class="stat"><small>Pengunjung bernama</small><strong id="stNamed">0</strong><span>nama terdaftar</span></div><div class="stat"><small>Rata-rata skor</small><strong id="stAvg">—</strong><span id="stEval">0 percobaan evaluasi</span></div></div>
+   <section class="card"><h2>Kunjungan 14 hari terakhir</h2><svg id="chart" viewBox="0 0 700 190" role="img" aria-label="Grafik kunjungan 14 hari terakhir" style="width:100%;height:auto"></svg></section>
+   <div class="grid3"><section class="card"><h2>Halaman terpopuler</h2><div id="popPages"></div></section><section class="card"><h2>Perangkat</h2><div id="popDev"></div></section><section class="card"><h2>Browser</h2><div id="popBrw"></div></section></div>
+  </section>
+  <section data-pane="pengunjung" hidden>
+   <div class="card"><h2>Daftar pengunjung</h2>
+    <div class="tools"><input id="fP" class="input" type="search" placeholder="Cari nama atau perangkat…" aria-label="Cari pengunjung"><button id="expP" class="btn secondary small" type="button">Ekspor CSV</button></div>
+    <div class="tbl-wrap"><table id="tblP" class="tbl"><thead><tr><th>Nama</th><th>Perangkat</th><th>Kunjungan</th><th>Pertama</th><th>Terakhir</th><th>Halaman terakhir</th><th>Skor terbaik</th></tr></thead><tbody></tbody></table></div>
+    <p class="notice" id="pCount"></p></div>
+  </section>
+  <section data-pane="kunjungan" hidden>
+   <div class="card"><h2>Daftar kunjungan</h2>
+    <div class="tools"><select id="fPage" class="input" aria-label="Filter halaman"><option value="all">Semua halaman</option><option value="index.html">Beranda</option><option value="materi.html">Materi</option><option value="simulasi.html">Simulasi</option><option value="evaluasi.html">Evaluasi</option><option value="profil.html">Profil</option></select>
+     <input id="fQ" class="input" type="search" placeholder="Cari nama, perangkat, browser…" aria-label="Cari kunjungan"><button id="expV" class="btn secondary small" type="button">Ekspor CSV</button></div>
+    <div class="tbl-wrap"><table id="tblV" class="tbl"><thead><tr><th>Waktu</th><th>Nama</th><th>Halaman</th><th>Perangkat</th><th>Browser</th><th>Layar</th><th>Asal</th></tr></thead><tbody></tbody></table></div>
+    <div class="pager"><span id="pInfo"></span><button id="pPrev" class="btn secondary small" type="button">‹ Sebelumnya</button><button id="pNext" class="btn secondary small" type="button">Berikutnya ›</button></div></div>
+  </section>
+  <section data-pane="evaluasi" hidden>
+   <div class="card"><h2>Hasil evaluasi terbaru</h2><div class="tools"><button id="expE" class="btn secondary small" type="button">Ekspor CSV</button></div>
+    <div class="tbl-wrap"><table id="tblE" class="tbl"><thead><tr><th>Waktu</th><th>Nama</th><th>Benar</th><th>Skor</th></tr></thead><tbody></tbody></table></div></div>
+  </section>
+  <section data-pane="pengaturan" hidden>
+   <div class="card"><h2>Ubah kata sandi</h2>
+    <form id="pwForm" autocomplete="off" style="max-width:380px">
+     <label class="field" for="pwOld">Kata sandi lama</label><input id="pwOld" class="input" type="password" autocomplete="current-password" required>
+     <label class="field" for="pwNew">Kata sandi baru (min. 8 karakter)</label><input id="pwNew" class="input" type="password" autocomplete="new-password" required>
+     <label class="field" for="pwNew2">Ulangi kata sandi baru</label><input id="pwNew2" class="input" type="password" autocomplete="new-password" required>
+     <div id="pwMsg" class="form-msg" hidden></div>
+     <div class="ev-actions"><button class="btn primary small" type="submit">Simpan</button></div></form></div>
+   <div class="card"><h2>Sinkronisasi antarperangkat (opsional)</h2>
+    <p class="notice" id="rInfo" style="margin-top:0"></p>
+    <label class="field" for="rKey">Kunci sinkronisasi</label><input id="rKey" class="input" type="password" autocomplete="off" style="max-width:380px">
+    <div class="ev-actions"><button id="rSave" class="btn primary small" type="button">Simpan &amp; sinkronkan</button></div>
+    <div id="rMsg" class="form-msg" hidden></div></div>
+   <div class="card"><h2>Data</h2><p class="notice" style="margin-top:0">Riwayat disimpan di <b>browser/perangkat ini</b> (localStorage), tidak dikirim ke server. Kunjungan dari perangkat lain tidak muncul di sini. Berisi nama yang diisi pengunjung, tanpa alamat IP.</p>
+    <button id="clearAll" class="btn secondary small" type="button">Hapus semua data</button></div>
+  </section>
+ </main>
+</div>
+<script src="./js/config.js"></script>
+<script src="./js/auth.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/admin.js"></script>
+</body>
+</html>

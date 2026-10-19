@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0e1d">
+<meta name="description" content="Evaluasi 10 soal tentang angin darat dan angin laut dengan penjelasan di setiap jawaban.">
+<title>Evaluasi — GeoFlow</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2322d3ee'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' font-family='Arial' font-weight='700' fill='%23041018'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./css/landing.css">
+<link rel="stylesheet" href="./css/pages.css">
+</head>
+<body>
+<nav class="nav" aria-label="Navigasi utama">
+  <a class="logo" href="./index.html"><span class="logo-mark">G</span><span>GeoFlow<small>LEARN THE ATMOSPHERE</small></span></a>
+  <button class="menu-btn" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+  <div class="navlinks"><a href="./index.html">Beranda</a><a href="./materi.html">Materi</a><a href="./simulasi.html">Simulasi</a><a href="./evaluasi.html">Evaluasi</a><a href="./profil.html">Profil</a></div>
+  <a class="nav-cta" href="./simulasi.html">Mulai eksplorasi <span>↗</span></a>
+</nav>
+<main>
+<header class="page-head"><span class="section-index">EVALUASI</span><h1>Uji pemahamanmu.</h1><p>Jawab 10 soal pilihan ganda tentang angin darat dan angin laut. Setiap jawaban langsung disertai penjelasan.</p></header>
+<div class="ev-wrap">
+ <section id="evIntro" class="ev-card">
+  <h2>Sebelum mulai</h2>
+  <ul class="ev-list"><li>Terdapat <b id="evTotal">10</b> soal; urutan soal dan pilihan jawaban diacak setiap percobaan.</li><li>Tidak ada batas waktu. Kamu bisa menekan tombol 1–4 di keyboard untuk memilih jawaban.</li><li>Pelajari dulu <a href="./materi.html" style="color:#67e8f9">materi</a> dan coba <a href="./simulasi.html" style="color:#67e8f9">simulasi 3D</a> agar lebih mudah.</li></ul>
+  <p class="ev-hello">Halo, <b id="evHello"></b>! Hasil evaluasi akan tercatat atas namamu.</p>
+  <div class="ev-actions"><button id="evStart" class="btn primary" type="button">Mulai evaluasi →</button></div>
+ </section>
+ <section id="evQuiz" class="ev-card" hidden aria-live="polite">
+  <div class="ev-top"><span id="evCount">Soal 1 dari 10</span><span>GeoFlow Knowledge Check</span></div>
+  <div class="ev-bar"><i id="evBar"></i></div>
+  <h2 id="evQ" class="ev-q"></h2>
+  <div id="evOpts"></div>
+  <div id="evFb" class="ev-fb" hidden></div>
+  <div class="ev-actions"><button id="evNext" class="btn primary" type="button" hidden>Soal berikutnya →</button></div>
+ </section>
+ <section id="evResult" class="ev-card" hidden>
+  <div class="score"><div class="score-ring"><div><strong id="evScore">0</strong><small>dari 100</small></div></div>
+   <div><div class="cat" id="evCat"></div><p id="evRaw" class="muted" style="margin:4px 0 8px"></p><p id="evMsg" style="margin:0;max-width:440px"></p></div></div>
+  <h2 style="font-size:20px;margin-top:8px">Tinjau jawabanmu</h2>
+  <div id="evReview"></div>
+  <h2 style="font-size:20px;margin-top:26px">Riwayat percobaan di perangkat ini</h2>
+  <div id="evHist"></div>
+  <div class="ev-actions"><button id="evRetry" class="btn primary" type="button">Ulangi evaluasi</button><a class="btn secondary" href="./simulasi.html">Kembali ke simulasi</a><a class="btn secondary" href="./materi.html">Baca materi</a></div>
+ </section>
+</div>
+</main>
+<footer class="site-foot">
+  <div class="foot-main"><a class="logo" href="./index.html"><span class="logo-mark">G</span><span>GeoFlow<small>LEARN THE ATMOSPHERE</small></span></a><p>Media Pembelajaran Geografi Kelas X · Angin Darat &amp; Angin Laut</p></div>
+  <div class="foot-links"><a href="./index.html">Beranda</a><a href="./materi.html">Materi</a><a href="./simulasi.html">Simulasi</a><a href="./evaluasi.html">Evaluasi</a><a href="./profil.html">Profil</a></div>
+  <p class="foot-note"><span id="gf-secret">©</span> 2026 GeoFlow · Dikembangkan oleh M. Hairul Jesri · Media ini mencatat nama dan riwayat kunjunganmu untuk keperluan evaluasi pembelajaran.</p>
+</footer>
+<script src="./js/config.js"></script>
+<script src="./js/common.js"></script>
+<script src="./js/evaluasi.js"></script>
+</body>
+</html>

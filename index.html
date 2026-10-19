@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0a0e1d">
+<meta name="description" content="GeoFlow — media pembelajaran interaktif Geografi Kelas X tentang angin darat dan angin laut.">
+<title>GeoFlow — Angin Darat & Angin Laut</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%2322d3ee'/%3E%3Ctext x='32' y='45' font-size='38' text-anchor='middle' font-family='Arial' font-weight='700' fill='%23041018'%3EG%3C/text%3E%3C/svg%3E">
+<link rel="stylesheet" href="./css/landing.css">
+<link rel="stylesheet" href="./css/pages.css">
+</head>
+<body>
+<nav class="nav" aria-label="Navigasi utama">
+  <a class="logo" href="./index.html"><span class="logo-mark">G</span><span>GeoFlow<small>LEARN THE ATMOSPHERE</small></span></a>
+  <button class="menu-btn" type="button" aria-label="Buka menu" aria-expanded="false">☰</button>
+  <div class="navlinks"><a href="./index.html">Beranda</a><a href="./materi.html">Materi</a><a href="./simulasi.html">Simulasi</a><a href="./evaluasi.html">Evaluasi</a><a href="./profil.html">Profil</a></div>
+  <a class="nav-cta" href="./simulasi.html">Mulai eksplorasi <span>↗</span></a>
+</nav>
+<main>
+<section id="home" class="hero">
+  <div class="hero-copy">
+    <div class="eyebrow"><i></i> GEOGRAFI KELAS X · PEMBELAJARAN INTERAKTIF</div>
+    <h1>Angin punya cerita.<br><em>Temukan polanya.</em></h1>
+    <p>Jelajahi bagaimana perbedaan pemanasan daratan dan lautan membentuk angin darat dan angin laut—dari perubahan suhu hingga gerakan udara.</p>
+    <div class="hero-actions"><button class="btn primary" id="gf-open-name" type="button">Masukkan Nama Pengunjung <span>＋</span></button><a class="btn secondary" href="#daftar-pengunjung">Daftar pengunjung ↓</a><a class="btn secondary" href="./materi.html">Pelajari konsep <span>↓</span></a></div>
+    <div class="hero-stats"><div><strong>24<span> jam</span></strong><small>Siklus waktu</small></div><div><strong>3D</strong><small>Visualisasi interaktif</small></div><div><strong>4</strong><small>Mode belajar</small></div></div>
+  </div>
+  <div class="hero-art" aria-label="Ilustrasi konseptual angin laut">
+    <div class="art-sky"><div class="sun-orb"></div><div class="cloud c1"></div><div class="cloud c2"></div><div class="art-label label-sun">ENERGI MATAHARI</div></div>
+    <div class="art-land"><div class="hill"></div><div class="tree tree-a"><i></i><b></b></div><div class="tree tree-b"><i></i><b></b></div><div class="art-label label-land">DARAT <small>lebih cepat panas</small></div></div>
+    <div class="art-sea"><div class="wave w1"></div><div class="wave w2"></div><div class="art-label label-sea">LAUT <small>lebih lambat berubah suhu</small></div></div>
+    <div class="wind-curve"><span>ANGIN LAUT</span><svg viewBox="0 0 320 100" role="img" aria-label="Arah angin dari laut ke darat"><defs><marker id="arrow" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6" fill="#67e8f9"/></marker></defs><path d="M300 65 C230 12 140 20 38 44" fill="none" stroke="#67e8f9" stroke-width="2.5" stroke-dasharray="6 7" marker-end="url(#arrow)"/></svg></div>
+    <div class="art-note"><span class="pulse"></span> SIANG HARI <b>LAUT → DARAT</b></div>
+  </div>
+</section>
+<section id="daftar-pengunjung" class="section gf-public-visitors">
+  <div class="section-heading"><div><span class="section-index">KOMUNITAS GEOFLOW</span><h2>Daftar pengunjung.</h2></div><p>Nama pengunjung yang sudah mengisi nama akan ditampilkan di sini. Daftar lintas perangkat memerlukan sinkronisasi online.</p></div>
+  <div id="gf-visitor-list" aria-live="polite"><p class="gf-list-status">Memuat daftar pengunjung…</p></div>
+</section>
+<section id="kenali" class="section">
+  <div class="section-heading"><div><span class="section-index">00 / PERKENALAN</span><h2>Kenali GeoFlow<br>dalam lima bagian.</h2></div><p>Alur belajar yang disarankan: baca materi, amati simulasi, uji pemahaman dengan evaluasi, lalu kenali pengembangnya.</p></div>
+  <div class="kenali-grid">
+   <a class="kenali-card here" href="#kenali"><div class="k-top"><span class="k-ic">🏠</span><span class="k-no">01</span></div><h3>Beranda</h3><p>Pintu masuk media: gambaran umum, ringkasan konsep, dan jalan pintas ke semua bagian.</p><span class="k-link">Kamu di sini ✓</span></a><a class="kenali-card" href="./materi.html"><div class="k-top"><span class="k-ic">📚</span><span class="k-no">02</span></div><h3>Materi</h3><p>Konsep dasar, kalor jenis, sebab–akibat, fase harian, contoh di Indonesia, latihan, dan glosarium.</p><span class="k-link">Baca materi →</span></a><a class="kenali-card" href="./simulasi.html"><div class="k-top"><span class="k-ic">🌊</span><span class="k-no">03</span></div><h3>Simulasi 3D</h3><p>Geser waktu 24 jam dan amati suhu, tekanan, serta arah angin pada lingkungan pesisir.</p><span class="k-link">Buka simulasi →</span></a><a class="kenali-card" href="./evaluasi.html"><div class="k-top"><span class="k-ic">📝</span><span class="k-no">04</span></div><h3>Evaluasi</h3><p>Sepuluh soal pilihan ganda dengan penjelasan di setiap jawaban dan ringkasan skor.</p><span class="k-link">Mulai evaluasi →</span></a><a class="kenali-card" href="./profil.html"><div class="k-top"><span class="k-ic">👤</span><span class="k-no">05</span></div><h3>Profil Pengembang</h3><p>Kenali M. Hairul Jesri dan perjalanan pembuatan media ini dari masalah sampai produk akhir.</p><span class="k-link">Lihat profil →</span></a>
+  </div>
+</section>
+<section id="sekilas" class="section">
+  <div class="section-heading"><div><span class="section-index">SEKILAS KONSEP</span><h2>Dua angin, satu<br>perbedaan pemanasan.</h2></div><p>Darat dan laut menerima energi yang sama, tetapi suhu keduanya berubah dengan laju berbeda. Perbedaan ini membantu membentuk sirkulasi angin lokal.</p></div>
+  <div class="concept-grid">
+    <article class="concept-card day"><div class="card-top"><span class="symbol">☼</span><span class="tag">SIANG HARI</span></div><h3>Angin laut</h3><p>Daratan memanas lebih cepat. Udara di atas daratan menghangat dan naik, sementara udara yang relatif lebih sejuk dari laut bergerak menuju darat.</p><div class="direction"><span>LAUT</span><div>⟶⟶⟶</div><span>DARAT</span></div><small class="card-caption">Angin permukaan: laut menuju darat</small></article>
+    <article class="concept-card night"><div class="card-top"><span class="symbol">☾</span><span class="tag">MALAM HARI</span></div><h3>Angin darat</h3><p>Daratan mendingin lebih cepat. Laut mempertahankan panas lebih lama, sehingga sirkulasi lokal dapat berbalik dan udara permukaan bergerak menuju laut.</p><div class="direction"><span>DARAT</span><div>⟶⟶⟶</div><span>LAUT</span></div><small class="card-caption">Angin permukaan: darat menuju laut</small></article>
+  </div>
+  <div style="margin-top:28px"><a class="btn primary" href="./materi.html">Baca materi lengkap ↗</a></div>
+</section>
+<section id="simulasi" class="section simulation-promo">
+  <div class="promo-copy"><span class="section-index">LABORATORIUM 3D</span><h2>Ubah waktu.<br>Lihat udara bergerak.</h2><p>Geser waktu, amati partikel udara, bandingkan suhu relatif, dan telusuri sirkulasi angin pada lingkungan pesisir tiga dimensi.</p><a class="btn primary" href="./simulasi.html">Masuk ke simulasi <span>↗</span></a></div>
+  <div class="timeline"><div><b>00</b><span>Malam</span></div><i></i><div><b>06</b><span>Pagi</span></div><i></i><div class="active"><b>12</b><span>Siang</span></div><i></i><div><b>18</b><span>Sore</span></div><i></i><div><b>24</b><span>Malam</span></div></div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="foot-main"><a class="logo" href="./index.html"><span class="logo-mark">G</span><span>GeoFlow<small>LEARN THE ATMOSPHERE</small></span></a><p>Media Pembelajaran Geografi Kelas X · Angin Darat &amp; Angin Laut</p></div>
+  <div class="foot-links"><a href="./index.html">Beranda</a><a href="./materi.html">Materi</a><a href="./simulasi.html">Simulasi</a><a href="./evaluasi.html">Evaluasi</a><a href="./profil.html">Profil</a></div>
+  <p class="foot-note"><span id="gf-secret">©</span> 2026 GeoFlow · Dikembangkan oleh M. Hairul Jesri · Media ini mencatat nama dan riwayat kunjunganmu untuk keperluan evaluasi pembelajaran.</p>
+</footer>
+<script src="./js/config.js"></script>
+<script src="./js/common.js"></script>
+</body>
+</html>
